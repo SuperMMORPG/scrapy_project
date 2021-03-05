@@ -50,7 +50,7 @@ class mysqlChoutiPipeline(object):
         print('*------------------------------------*')
         print('准备连接数据库，开始chouti任务...')
         print('*------------------------------------*')
-        self.conn = pymysql.Connect(host='127.0.0.1',port=3306,user='root',password='myangel123',db='scrapy_project',charset='utf8')
+        self.conn = pymysql.Connect(host='127.0.0.1',port=3306,user='root',password='*',db='scrapy_project',charset='utf8')
 
     def process_item(self, item, spider):
 
