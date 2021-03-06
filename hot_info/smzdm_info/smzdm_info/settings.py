@@ -67,7 +67,7 @@ LOG_LEVEL = 'ERROR'
 # mysqlSmzdmInfoPipeline
 ITEM_PIPELINES = {
     'smzdm_info.pipelines.SmzdmInfoPipeline': 300,
-    'smzdm_info.pipelines.mysqlSmzdmInfoPipeline': 310,
+    #'smzdm_info.pipelines.mysqlSmzdmInfoPipeline': 310,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

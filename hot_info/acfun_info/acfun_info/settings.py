@@ -67,7 +67,7 @@ DOWNLOADER_MIDDLEWARES = {
 # mysqlPipeline
 ITEM_PIPELINES = {
     'acfun_info.pipelines.AcfunInfoPipeline': 300,
-    'acfun_info.pipelines.mysqlPipeline': 301,
+    #'acfun_info.pipelines.mysqlPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

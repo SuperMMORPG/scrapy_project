@@ -66,7 +66,7 @@ LOG_LEVEL = 'ERROR'
 # mysqlZhihuInfoPipeline
 ITEM_PIPELINES = {
     'zhihu_info_3.pipelines.ZhihuInfo3Pipeline': 300,
-    'zhihu_info_3.pipelines.mysqlZhihuInfoPipeline': 310,
+    #'zhihu_info_3.pipelines.mysqlZhihuInfoPipeline': 310,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

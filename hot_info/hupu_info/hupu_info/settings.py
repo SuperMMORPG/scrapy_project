@@ -67,7 +67,7 @@ LOG_LEVEL = 'ERROR'
 # mysqlHupuInfoPipeline
 ITEM_PIPELINES = {
     'hupu_info.pipelines.HupuInfoPipeline': 300,
-    'hupu_info.pipelines.mysqlHupuInfoPipeline': 301,
+    #'hupu_info.pipelines.mysqlHupuInfoPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

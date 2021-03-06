@@ -67,7 +67,7 @@ LOG_LEVEL = 'ERROR'
 # mysqlDoubanPipeline
 ITEM_PIPELINES = {
     'douban_info.pipelines.DoubanInfoPipeline': 300,
-    'douban_info.pipelines.mysqlDoubanPipeline': 301,
+    #'douban_info.pipelines.mysqlDoubanPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

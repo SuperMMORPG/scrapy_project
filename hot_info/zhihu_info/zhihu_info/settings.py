@@ -67,7 +67,7 @@ DOWNLOADER_MIDDLEWARES = {
 # mysqlZhihuInfoPipeline
 ITEM_PIPELINES = {
     'zhihu_info.pipelines.ZhihuInfoPipeline': 300,
-    'zhihu_info.pipelines.mysqlZhihuInfoPipeline': 310,
+    #'zhihu_info.pipelines.mysqlZhihuInfoPipeline': 310,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

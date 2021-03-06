@@ -66,7 +66,7 @@ DOWNLOADER_MIDDLEWARES = {
 # mysqlChoutiPipeline
 ITEM_PIPELINES = {
     'chouti_info.pipelines.ChoutiInfoPipeline': 300,
-    'chouti_info.pipelines.mysqlChoutiPipeline': 301,
+    #'chouti_info.pipelines.mysqlChoutiPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

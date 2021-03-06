@@ -67,7 +67,7 @@ LOG_LEVEL = 'ERROR'
 # mysqlGuanchaInfoPipeline
 ITEM_PIPELINES = {
     'guancha_info.pipelines.GuanchaInfoPipeline': 300,
-    'guancha_info.pipelines.mysqlGuanchaInfoPipeline': 301,
+    #'guancha_info.pipelines.mysqlGuanchaInfoPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

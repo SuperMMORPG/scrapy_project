@@ -66,7 +66,7 @@ LOG_LEVEL = 'ERROR'
 # mysqlBilibiliPipeline
 ITEM_PIPELINES = {
     'bilibili_info.pipelines.BilibiliInfoPipeline': 300,
-    'bilibili_info.pipelines.mysqlBilibiliPipeline': 301,
+    #'bilibili_info.pipelines.mysqlBilibiliPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
