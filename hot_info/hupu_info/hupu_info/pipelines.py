@@ -17,7 +17,8 @@ class HupuInfoPipeline:
         #print('开始任务...')
 
         dir_path = './today_data'
-        filename = datetime.today().strftime('%Y%m%d') + '.md'
+        name = spider.name + '_'
+        filename = name + datetime.today().strftime('%Y%m%d') + '.md'
         file_path = os.path.join(dir_path,filename)
         self.fp = open(file_path,'w',encoding='utf-8')
         self.fp.write('# hupu')
