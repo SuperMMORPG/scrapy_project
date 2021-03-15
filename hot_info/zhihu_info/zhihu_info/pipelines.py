@@ -31,7 +31,7 @@ class ZhihuInfoPipeline:
         self.fp.write('\n')
         self.fp.write('tags: scrapy_%s'%(spider.name))
         self.fp.write('\n')
-        self.fp.write('categories: Spider')
+        self.fp.write('categories: news')
         self.fp.write('\n')
         self.fp.write('---')
         self.fp.write('\n')
