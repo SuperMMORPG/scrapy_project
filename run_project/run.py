@@ -57,6 +57,9 @@ def test():
     os.chdir('./hot_info\\bilibili_info')
     print(os.getcwd())
 
+def run_copy():
+
+    return None
 
 if __name__ == '__main__':
 
