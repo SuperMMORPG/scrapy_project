@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 import pymysql
 import os
 import time
+import shutil
 from datetime import datetime
 class ZhihuInfo3Pipeline:
     fp = None
