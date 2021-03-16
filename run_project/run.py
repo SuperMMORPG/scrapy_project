@@ -3,7 +3,7 @@
 
 import os
 from time import sleep
-
+import redis
 
 '''
 得到需要运行的文件位置
@@ -33,8 +33,26 @@ def getDirPath():
 
     return list_dir_path,list_name
 
+def getRedisStatus():
+
+    conn = redis.Redis(host='127.0.0.1',port=6379)
+    try:
+        status = conn.ping()
+        if status:
+            print('redis server running......')
+            return True
+    except redis.exceptions.ConnectionError:
+        print('No Redis Server')
+        return False
+    
+
 #运行各个脚本
 def run(list_dir_path,list_name):
+
+    status = getRedisStatus()
+    if not status:
+        print('********************')
+        return False
 
     for (dir_path,name) in zip(list_dir_path,list_name):
 
@@ -62,6 +80,8 @@ def run_copy():
     return None
 
 if __name__ == '__main__':
+
+    #getRedisStatus()
 
     list_result= getDirPath()
     run(list_result[0],list_result[1])
