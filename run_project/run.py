@@ -34,8 +34,8 @@ def getDirPath():
     return list_dir_path,list_name
 
 def getRedisStatus():
-
-    conn = redis.Redis(host='127.0.0.1',port=6379)
+    redis_ip = '192.168.1.100'
+    conn = redis.Redis(host=redis_ip,port=6379)
     try:
         status = conn.ping()
         if status:
@@ -81,8 +81,8 @@ def run_copy():
 
 if __name__ == '__main__':
 
-    #getRedisStatus()
+    getRedisStatus()
 
-    list_result= getDirPath()
-    run(list_result[0],list_result[1])
+    #list_result= getDirPath()
+    #run(list_result[0],list_result[1])
     #test()
