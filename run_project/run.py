@@ -81,8 +81,8 @@ def run_copy():
 
 if __name__ == '__main__':
 
-    getRedisStatus()
+    #getRedisStatus()
 
-    #list_result= getDirPath()
-    #run(list_result[0],list_result[1])
+    list_result= getDirPath()
+    run(list_result[0],list_result[1])
     #test()
