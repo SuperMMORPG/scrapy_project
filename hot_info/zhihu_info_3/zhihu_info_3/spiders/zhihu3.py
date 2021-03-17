@@ -7,7 +7,7 @@ class Zhihu3Spider(scrapy.Spider):
     name = 'zhihu3'
     #allowed_domains = ['www.c.com']
     start_urls = ['https://www.zhihu.com/billboard']
-    conn = Redis(host='127.0.0.1',port=6379)
+    conn = Redis(host='192.168.1.100',port=6379)
 
     def parse(self, response):
         

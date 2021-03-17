@@ -5,7 +5,7 @@ class HupuSpider(scrapy.Spider):
     name = 'hupu'
     #allowed_domains = ['www.xx.com']
     start_urls = ['https://bbs.hupu.com/all-gambia']
-    conn = Redis(host='127.0.0.1',port=6379)
+    conn = Redis(host='192.168.1.100',port=6379)
 
     def parse(self, response):
         # 新版本虎扑

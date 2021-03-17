@@ -8,7 +8,7 @@ class ChoutiSpider(scrapy.Spider):
     name = 'chouti'
     #allowed_domains = ['ww.xx.com']
     start_urls = ['https://dig.chouti.com/']
-    conn = Redis(host='127.0.0.1',port=6379)
+    conn = Redis(host='192.168.1.100',port=6379)
 
     def __init__(self):
 

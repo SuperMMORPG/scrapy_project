@@ -6,7 +6,7 @@ class SmzdmSpider(scrapy.Spider):
     #allowed_domains = ['www.xx.com']
     start_urls = ['https://post.smzdm.com/hot_1/']
 
-    conn = Redis(host='127.0.0.1',port=6379)
+    conn = Redis(host='192.168.1.100',port=6379)
 
     def parse(self, response):
         

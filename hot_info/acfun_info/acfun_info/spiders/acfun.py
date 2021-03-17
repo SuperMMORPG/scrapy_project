@@ -10,7 +10,7 @@ class AcfunSpider(scrapy.Spider):
     #allowed_domains = ['www.xx.com']
     start_urls = ['https://www.acfun.cn/rank/list#cid=-1;range=1']
 
-    conn = Redis(host='127.0.0.1',port=6379)
+    conn = Redis(host='192.168.1.100',port=6379)
 
     def __init__(self):
         self.bro = webdriver.Chrome(executable_path='./chromedriver.exe')
