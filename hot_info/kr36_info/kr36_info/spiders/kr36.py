@@ -1,10 +1,12 @@
 import scrapy
+from redis import Redis
 from kr36_info.items import Kr36RenqiItem,Kr36ZongheItem,Kr36ShoucangItem
 
 
 class Kr36Spider(scrapy.Spider):
     name = 'kr36'
     start_urls = ['https://36kr.com/hot-list/catalog']
+    conn = Redis(host='192.168.1.100',port=6379)
 
     def getInfo(self, div):
         
@@ -38,7 +40,14 @@ class Kr36Spider(scrapy.Spider):
             item['renqi_ranking'] = d
             item['renqi_title'] = info_list[0]
             item['renqi_url'] = info_list[1]
-            yield item
+
+            ex = self.conn.sadd('36kr',info_list[1])
+            if ex==1:
+                print('该地址为新地址，可以进行任务获取',info_list[1])
+                yield item
+            else:
+                print('地址已经存在',info_list[1])
+                yield item
         
         zonghe_dict = self.getInfo(div_zonghe)
         for d in zonghe_dict:
@@ -48,7 +57,14 @@ class Kr36Spider(scrapy.Spider):
             item['zonghe_ranking'] = d
             item['zonghe_title'] = info_list[0]
             item['zonghe_url'] = info_list[1]
-            yield item
+
+            ex = self.conn.sadd('36kr',info_list[1])
+            if ex==1:
+                print('该地址为新地址，可以进行任务获取',info_list[1])
+                yield item
+            else:
+                print('地址已经存在',info_list[1])
+                yield item
         
         shoucang_dict = self.getInfo(div_shoucang)
         for d in shoucang_dict:
@@ -58,7 +74,14 @@ class Kr36Spider(scrapy.Spider):
             item['shoucang_ranking'] = d
             item['shoucang_title'] = info_list[0]
             item['shoucang_url'] = info_list[1]
-            yield item
+            
+            ex = self.conn.sadd('36kr',info_list[1])
+            if ex==1:
+                print('该地址为新地址，可以进行任务获取',info_list[1])
+                yield item
+            else:
+                print('地址已经存在',info_list[1])
+                yield item
 
         
 
