@@ -18,7 +18,7 @@ NEWSPIDER_MODULE = 'hupu_info.spiders'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 LOG_LEVEL = 'ERROR'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
