@@ -53,9 +53,10 @@ def run(list_dir_path,list_name):
     if not status:
         print('********************')
         return False
-
+    num = 0
+    
     for (dir_path,name) in zip(list_dir_path,list_name):
-
+        num = num + 1
         #修改当前工作目录
         os.chdir( dir_path )
         #查看修改后的工作目录
@@ -65,7 +66,7 @@ def run(list_dir_path,list_name):
         ex = 'scrapy crawl ' + name
         os.system(ex)
         print('***********************')
-        print('运行 %s 结束'%(name))
+        print('第 %d 个脚本-运行 %s 结束'%(num,name))
         print('***********************')
         sleep(5)
 

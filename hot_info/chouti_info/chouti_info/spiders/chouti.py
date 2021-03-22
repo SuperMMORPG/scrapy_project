@@ -45,7 +45,7 @@ class ChoutiSpider(scrapy.Spider):
                 #print('该地址为新地址，可以进行任务获取',url)
                 yield item
             else:
-                print('地址已经存在',url)
+                print('%s小时-地址已经存在: %s '%(item['chouti_hours'],url))
                 yield item
 
         
@@ -67,7 +67,7 @@ class ChoutiSpider(scrapy.Spider):
                 #print('该地址为新地址，可以进行任务获取',url)
                 yield item
             else:
-                print('地址已经存在',url)
+                print('%s小时-地址已经存在: %s '%(item['chouti_hours'],url))
                 yield item
 
         ranking_168 = 0
@@ -88,7 +88,7 @@ class ChoutiSpider(scrapy.Spider):
                 #print('该地址为新地址，可以进行任务获取',url)
                 yield item
             else:
-                print('地址已经存在',url)
+                print('%s小时-地址已经存在: %s '%(item['chouti_hours'],url))
                 yield item
         
 
