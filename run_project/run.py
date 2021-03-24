@@ -59,15 +59,20 @@ def run(list_dir_path,list_name):
         num = num + 1
         #修改当前工作目录
         os.chdir( dir_path )
+
+        if name == 'jqka10':
+            # 不让其运行,跳出循环
+            continue
+
         #查看修改后的工作目录
         #retval = os.getcwd()
         #print ("******修改后工作目录为 %s" % retval)
         sleep(2)
         ex = 'scrapy crawl ' + name
         os.system(ex)
-        print('***********************')
-        print('第 %d 个脚本-运行 %s 结束'%(num,name))
-        print('***********************')
+        print('*************************************')
+        print('** 第 %d 个脚本-运行 %s 结束 '%(num,name))
+        print('*************************************')
         sleep(5)
 
 #测试
