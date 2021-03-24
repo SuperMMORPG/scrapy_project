@@ -56,7 +56,6 @@ def run(list_dir_path,list_name):
     num = 0
     
     for (dir_path,name) in zip(list_dir_path,list_name):
-        num = num + 1
         #修改当前工作目录
         os.chdir( dir_path )
 
@@ -68,6 +67,7 @@ def run(list_dir_path,list_name):
         #retval = os.getcwd()
         #print ("******修改后工作目录为 %s" % retval)
         sleep(2)
+        num = num + 1
         ex = 'scrapy crawl ' + name
         os.system(ex)
         print('*************************************')
