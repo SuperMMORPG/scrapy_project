@@ -26,7 +26,7 @@ class JlpcnSpider(scrapy.Spider):
         item = response.meta['item']
         english_title = response.xpath('/html/body/div[7]/div[1]/div/div[1]/div/div[3]/ul/li[1]/span/text()').extract_first()
         ul_list = response.xpath('//*[@id="down_list_2"]/ul')
-        print(item['url'])
+        #print(item['url'])
         bt_all = []
         for ul in ul_list:
             bt_dl = []
