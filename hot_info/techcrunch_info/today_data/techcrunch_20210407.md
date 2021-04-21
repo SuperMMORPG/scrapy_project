@@ -6,7 +6,8 @@ categories: news
 ---
 # techcrunch
 ## 2021-04-07 22:54:00
-- [TC Early Stage Pitch-Off: Fitted - TC Video - 2021-04-02T10:00:58-07:00](https://techcrunch.com/video/tc-early-stage-pitch-off-fitted/)
+- [TC Early Stage Pitch-Off: Fitted - TC Video 
+- 2021-04-02T10:00:58-07:00](https://techcrunch.com/video/tc-early-stage-pitch-off-fitted/)
 - [TC Early Stage Pitch-Off: Nalagenetics - TC Video - 2021-04-02T10:00:51-07:00](https://techcrunch.com/video/tc-early-stage-pitch-off-nalagenetics/)
 - [TC Early Stage Pitch-Off: Attention Quotient - TC Video - 2021-04-02T10:00:48-07:00](https://techcrunch.com/video/tc-early-stage-pitch-off-attention-quotient/)
 - [TC Early Stage Pitch-Off: Crispify - TC Video - 2021-04-02T10:00:38-07:00](https://techcrunch.com/video/tc-early-stage-pitch-off-crispify/)
