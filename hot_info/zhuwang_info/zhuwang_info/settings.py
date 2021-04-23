@@ -1,4 +1,4 @@
-# Scrapy settings for unsplash_info project
+# Scrapy settings for zhuwang_info project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,23 +7,20 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'unsplash_info'
+BOT_NAME = 'zhuwang_info'
 
-SPIDER_MODULES = ['unsplash_info.spiders']
-NEWSPIDER_MODULE = 'unsplash_info.spiders'
+SPIDER_MODULES = ['zhuwang_info.spiders']
+NEWSPIDER_MODULE = 'zhuwang_info.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'unsplash_info (+http://www.yourdomain.com)'
+#USER_AGENT = 'zhuwang_info (+http://www.yourdomain.com)'
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-
 LOG_LEVEL = 'ERROR'
-
-IMAGES_STORE = './img_Data'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -51,13 +48,13 @@ IMAGES_STORE = './img_Data'
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'unsplash_info.middlewares.UnsplashInfoSpiderMiddleware': 543,
+#    'zhuwang_info.middlewares.ZhuwangInfoSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'unsplash_info.middlewares.UnsplashInfoDownloaderMiddleware': 543,
+#    'zhuwang_info.middlewares.ZhuwangInfoDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -69,8 +66,7 @@ IMAGES_STORE = './img_Data'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'unsplash_info.pipelines.UnsplashInfoPipeline': 300,
-    #'unsplash_info.pipelines.imgPipeline': 301,
+    #'zhuwang_info.pipelines.ZhuwangInfoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
