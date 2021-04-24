@@ -66,7 +66,7 @@ LOG_LEVEL = 'ERROR'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    #'zhuwang_info.pipelines.ZhuwangInfoPipeline': 300,
+    'zhuwang_info.pipelines.ZhuwangInfoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

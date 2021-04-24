@@ -9,32 +9,27 @@ from itemadapter import ItemAdapter
 
 from zhuwang_info.utils import create_md
 
-# 此markdown文件 格式不满意 待修改
-class ZhuwangInfoPipeline:
-    fp = None
 
-    #重写父类方法，启动爬虫调用一次
-    def open_spider(self,spider):
-        
-        self.fp = create_md(spider)
+class ZhuwangInfoPipeline:
+
+    fp = None
 
     def process_item(self, item, spider):
 
-        province_name = item['province_name']
-        today_price = item['today_price']
-        yesterday_price = item['yesterday_price']
-        source_url = item['source_url']
-        title = item['title']
-        today_date = item['today_date']
-        yesterday_date = item['yesterday_date']
-        shengzhu_type = item['shengzhu_type']
+        item_dict = item['item_dict']
+        price_form = item_dict['info_form']['price_form']
 
-        self.fp.write('| %s | %s | %s |'%(province_name,today_price,yesterday_price))
-
-        self.fp.write('\n')
+        self.fp = create_md(spider,item_dict)
+        for price_data in price_form:
+            province_name = price_data['province_name']
+            today_price = price_data['today_price']
+            yesterday_price = price_data['yesterday_price']
+            self.fp.write('| %s | %s | %s |'%(province_name,today_price,yesterday_price) + '\n')
         
-        return item
+        self.fp.write('*****'+'\n')
 
-    def close_spider(self,spider):
-        #print('任务结束...')
         self.fp.close()
+
+        return item
+    
+

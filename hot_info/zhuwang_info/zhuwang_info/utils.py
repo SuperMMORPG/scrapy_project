@@ -23,14 +23,20 @@ def add(conn,name,url):
         return False
 
 
-def create_md(spider):
+def create_md(spider,item_dict):
 
-    #print('开始任务...')
+    source_url = item_dict['source_url']
+    title = item_dict['title']
+    info_form = item_dict['info_form'] 
+    shengzhu_type = item_dict['shengzhu_type'] 
+    info_form = item_dict['info_form']
+    today_date = info_form['today_date']
+    yesterday_date = info_form['yesterday_date']
+
     fp = None
     dir_path = './today_data'
-
     save_path = Path(dir_path)
-
+    # 创建文件夹
     if save_path.exists():
         pass
         #print('true')
@@ -38,7 +44,7 @@ def create_md(spider):
         save_path.mkdir()
 
 
-    name = spider.name + '_'
+    name = title + '_'
     filename = name + datetime.today().strftime('%Y%m%d') + '.md'
     file_path = os.path.join(dir_path,filename)
     fp = open(file_path,'w',encoding='utf-8')
@@ -55,13 +61,15 @@ def create_md(spider):
     fp.write('\n')
     fp.write('---')
     fp.write('\n')
-    fp.write('# %s'%(spider.name))
+    fp.write('# %s'%(shengzhu_type))
     fp.write('\n')
     now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     fp.write('## %s'%(now_time))
     fp.write('\n')
+    fp.write('## [数据源](%s)'%(source_url))
+    fp.write('\n')
     fp.write('*****'+'\n')
-    fp.write('| 省份 | 今日 | 昨日 |' + '\n')
+    fp.write('| 省份 | %s | %s |'%(today_date,yesterday_date) + '\n')
     fp.write('| :----: | :----: | :----: |' + '\n')
 
     return fp
@@ -73,5 +81,9 @@ def test():
     a = re.findall(ex,title)
     list_area = ['华东','西北','华中','华北','华南','东北','西南']
     td_1 = '华中1'
-    if td_1 in list_area:
-        print(td_1)
+    
+
+    full_date = '来源：中国养猪网 2021-04-23 07:30:25|  查看：次'
+    ex = '(.*?)\|'
+    str_re = re.findall(ex,full_date)
+    
